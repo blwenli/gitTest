@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayoutNews"
+    android:layout_width="fill_parent"
+    android:layout_height="90dip"
+    android:orientation="horizontal"
+    android:padding="6dip"
+    android:background="@drawable/white_gray" >
+
+    <ImageView
+        android:id="@+id/NewsItemImage"
+        android:layout_width="75dip"
+        android:layout_height="75dip"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="6dip"
+        android:contentDescription="News Cache Pic"
+        android:gravity="center_vertical"
+        android:background="@drawable/placeholder"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/Abstract"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Title"
+            android:layout_above="@+id/ButtomBar"
+            android:text="Abstract"
+            android:textColor="@color/gray"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:id="@+id/ButtomBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/NewsTimestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@color/white"
+                android:text="3小时前"
+                android:textColor="@color/darkgray"
+                android:padding="1px"
+                android:gravity="center"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/NewsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/label_border"
+                android:text="热门"
+                android:textColor="@color/red"
+                android:gravity="center"
+                android:padding="1px"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
